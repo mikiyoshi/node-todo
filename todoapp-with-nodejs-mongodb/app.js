@@ -8,6 +8,8 @@ const connectDB = require('./db/connect');
 require('dotenv').config();
 // this is a post error form postman when POST data by JSON
 app.use(express.json());
+// setup Home page from ./public/index.html
+app.use(express.static('./public'));
 
 const PORT = 5000;
 
@@ -23,7 +25,7 @@ app.use('/api/v1/tasks', taskRouter);
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URL);
-    // 'mongodb+srv://todoapp-nodejs:test1234@cluster0.4jd1r.mongodb.net/todoapp?retryWrites=true&w=majority' // this URL is not secure for now, we need update for illegibility / 非読性
+    // this URL is not secure for now, we need update for illegibility / 非読性
     // update from connectDB() to connectDB(process.env.MONGO_URL)
     app.listen(PORT, console.log('Start localhost:5000'));
   } catch (err) {
