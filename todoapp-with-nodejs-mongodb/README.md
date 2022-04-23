@@ -63,11 +63,16 @@ npm i express nodemon
 npm i mongoose
 ```
 
-postman: test backend function
-axios: create by FrontEnd
+## postman: test backend function
 
 | Client      | Server / node.js                                               | DataBase / mongoDB |
 | ----------- | -------------------------------------------------------------- | ------------------ |
 |             | postman GET(edit), POST(create), PATCH(update), DELETE(delete) | mongoose           |
-|             | axios GET(edit), POST(create), PATCH(update), DELETE(delete)   | mongoose           |
 | postman res |                                                                | mongoose           |
+
+## axios: create by FrontEnd
+
+| Client      | Server / node.js                                             | DataBase / mongoDB |
+| ----------- | ------------------------------------------------------------ | ------------------ |
+|             | axios GET(edit), POST(create), PATCH(update), DELETE(delete) | mongoose           |
+| postman res |                                                              | mongoose           |

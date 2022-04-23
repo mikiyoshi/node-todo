@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Node.js and MongoDB TodoApp</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <form class="task-form">
@@ -19,6 +26,28 @@
         />
         <button type="submit" class="btn submit-btn">Submit</button>
       </div>
+      <div class="form-alert"></div>
+      <!-- add error message -->
     </form>
+
+    <section class="tasks-container">
+      <div class="tasks">
+        <!-- this is sample test in static data
+          <div class="single-task">
+          <h5>
+            <span><i class="fa fa-check-circle"></i></span>task
+          </h5>
+          <div class="task-links">
+            <a href="#" class="edit-link"><i class="fa fa-edit"></i></a>
+            <button type="button" class="delete-btn">
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- add axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

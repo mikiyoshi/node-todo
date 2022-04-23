@@ -46,6 +46,7 @@ const getSingleTask = async (req, res) => {
   // search from mongoose Document at API, Model, findOne() https://mongoosejs.com/docs/api/model.html#model_Model.findOne
   // test using postman, GET SINGLE TODO, route from routes/tasks.js getSingleTask = app.js = /api/v1/tasks/:id
   try {
+    // Task.findOne({ _id: req.params.id }) is algorithm
     const getSingleTask = await Task.findOne({ _id: req.params.id }); // req.params.id = :id from /api/v1/tasks/:id, if _id = mongoDB Single task id like a "6262d8ebcf497b95fac100f3" or not to check
     if (!getSingleTask) {
       return res.status(404).json(`_id:${req.params.id} is not exist`);
